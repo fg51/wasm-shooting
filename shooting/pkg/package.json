@@ -1,0 +1,16 @@
+{
+  "name": "shooting",
+  "collaborators": [
+    "kflange <zknsftk1msrk@gmail.com>"
+  ],
+  "description": null,
+  "version": "0.1.0",
+  "license": null,
+  "repository": null,
+  "files": [
+    "shooting_bg.wasm",
+    "shooting.d.ts"
+  ],
+  "main": "shooting.js",
+  "types": "shooting.d.ts"
+}
