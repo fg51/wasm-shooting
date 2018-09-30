@@ -60,12 +60,37 @@ export function __widl_f_begin_path_CanvasRenderingContext2D(arg0) {
     __widl_f_begin_path_CanvasRenderingContext2D_target.call(getObject(arg0));
 }
 
+const __widl_f_fill_CanvasRenderingContext2D_target = CanvasRenderingContext2D.prototype.fill || function() {
+    throw new Error(`wasm-bindgen: CanvasRenderingContext2D.prototype.fill does not exist`);
+};
+
+export function __widl_f_fill_CanvasRenderingContext2D(arg0) {
+    __widl_f_fill_CanvasRenderingContext2D_target.call(getObject(arg0));
+}
+
 const __widl_f_stroke_CanvasRenderingContext2D_target = CanvasRenderingContext2D.prototype.stroke || function() {
     throw new Error(`wasm-bindgen: CanvasRenderingContext2D.prototype.stroke does not exist`);
 };
 
 export function __widl_f_stroke_CanvasRenderingContext2D(arg0) {
     __widl_f_stroke_CanvasRenderingContext2D_target.call(getObject(arg0));
+}
+
+function GetOwnOrInheritedPropertyDescriptor(obj, id) {
+    while (obj) {
+        let desc = Object.getOwnPropertyDescriptor(obj, id);
+        if (desc) return desc;
+        obj = Object.getPrototypeOf(obj);
+    }
+    throw new Error(`descriptor for id='${id}' not found`);
+}
+
+const __widl_f_set_fill_style_CanvasRenderingContext2D_target = GetOwnOrInheritedPropertyDescriptor(CanvasRenderingContext2D.prototype, 'fillStyle').set || function() {
+    throw new Error(`wasm-bindgen: GetOwnOrInheritedPropertyDescriptor(CanvasRenderingContext2D.prototype, 'fillStyle').set does not exist`);
+};
+
+export function __widl_f_set_fill_style_CanvasRenderingContext2D(arg0, arg1) {
+    __widl_f_set_fill_style_CanvasRenderingContext2D_target.call(getObject(arg0), getObject(arg1));
 }
 
 const __widl_f_arc_CanvasRenderingContext2D_target = CanvasRenderingContext2D.prototype.arc || function() {
@@ -102,6 +127,14 @@ export function __widl_f_arc_CanvasRenderingContext2D(arg0, arg1, arg2, arg3, ar
         view[exnptr / 4 + 1] = addHeapObject(e);
 
     }
+}
+
+const __widl_f_line_to_CanvasRenderingContext2D_target = CanvasRenderingContext2D.prototype.lineTo || function() {
+    throw new Error(`wasm-bindgen: CanvasRenderingContext2D.prototype.lineTo does not exist`);
+};
+
+export function __widl_f_line_to_CanvasRenderingContext2D(arg0, arg1, arg2) {
+    __widl_f_line_to_CanvasRenderingContext2D_target.call(getObject(arg0), arg1, arg2);
 }
 
 const __widl_f_move_to_CanvasRenderingContext2D_target = CanvasRenderingContext2D.prototype.moveTo || function() {
@@ -213,6 +246,10 @@ function dropRef(idx) {
 
 export function __wbindgen_object_drop_ref(i) {
     dropRef(i);
+}
+
+export function __wbindgen_string_new(p, l) {
+    return addHeapObject(getStringFromWasm(p, l));
 }
 
 export function __wbindgen_number_get(n, invalid) {

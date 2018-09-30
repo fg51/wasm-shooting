@@ -57,6 +57,33 @@ pub fn draw() {
     context
         .arc(90.0, 65.0, 5.0, 0.0, f64::consts::PI * 2.0)
         .unwrap();
-
     context.stroke();
+
+    let ctx = canvas
+        .get_context("2d")
+        .unwrap()
+        .unwrap()
+        .dyn_into::<web_sys::CanvasRenderingContext2d>()
+        .unwrap();
+
+    ctx.begin_path();
+
+    // draw Player
+    let p = Player { x: 20.0, y: 16.0 };
+    ctx.begin_path();
+    ctx.set_fill_style(&JsValue::from_str(&"red"));
+    ctx.line_to(p.x + 20.0, p.y + 8.0);
+    ctx.line_to(p.x + 0.0, p.y + 16.0);
+    ctx.line_to(p.x + 0.0, p.y + 0.0);
+    ctx.fill();
+    ctx.stroke();
 }
+
+struct Player {
+    x: f64,
+    y: f64,
+}
+
+// impl draw for Player {
+//     draw()
+// }
